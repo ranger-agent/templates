@@ -1,0 +1,20 @@
+resources:
+  lc.xlarge:
+    type: OS::Nova::Flavor
+    properties:
+      ram: 16384
+      vcpus: 8
+      disk: 320
+  lc.xlarge:
+    type: OS::Nova::Flavor
+    properties:
+      ram: 32768
+      vcpus: 8
+      disk: 400
+  lc.3xlarge:
+    type: OS::Nova::Flavor
+    properties:
+      ram: 32768
+      vcpus: 8
+      disk: 4500
+
