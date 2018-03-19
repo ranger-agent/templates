@@ -1,0 +1,25 @@
+heat_template_version: 2013-05-23
+
+description: yaml file for region - region1
+
+resources:
+  nova_flavor:
+    properties:
+      disk: 12
+      ephemeral: 0
+      extra_specs: {'aggregate_instance_extra_specs:c2': 'true', 'aggregate_instance_extra_specs:gv': 'true',
+        'hw:numa_nodes': '2'}
+      flavorid: 01fc10a79c024f7bac9000a37cca5589
+      is_public: true
+      name: gv.c2r4096d12
+      ram: 4096
+      rxtx_factor: 1
+      swap: 0
+      tenants: []
+      vcpus: 2
+    type: OS::Nova::Flavor
+
+outputs:
+  nova_flavor_id:
+    value: {get_resource: nova_flavor}
+
